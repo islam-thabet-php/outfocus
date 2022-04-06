@@ -1,0 +1,9 @@
+
+.add-btn{
+    position: absolute;
+    right: -5px;
+}
+.remove-btn{
+    position: absolute;
+    right: 5px;
+}
