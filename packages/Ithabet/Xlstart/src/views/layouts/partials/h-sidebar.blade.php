@@ -72,11 +72,22 @@
                     <i class="menu-livicon" data-icon="users"></i>
                     <span data-i18n="Persons">{{ __('Manage Persons') }}</span></a>
                 <ul class="dropdown-menu">
+                    @can('roles.index')
+                        <li data-menu="">
+                            <a class="dropdown-item align-items-center" href="{{ route('roles.index') }}"
+                               data-toggle="dropdown">
+                                <i class="bx bx-right-arrow-alt"></i>
+                                <span data-i18n="Roles">{{ __('Roles') }}</span></a>
+                        </li>
+                    @endcan
+                        @can('users.index')
                     <li data-menu="">
                         <a class="dropdown-item align-items-center" href="{{ url('xadmin/users') }}" data-toggle="dropdown">
                             <i class="bx bx-right-arrow-alt"></i>
                             <span data-i18n="Users">{{ __('Users') }}</span></a>
                     </li>
+                        @endcan
+
                     <li data-menu="">
                         <a class="dropdown-item align-items-center" href="{{ url('xadmin/vendors') }}" data-toggle="dropdown">
                             <i class="bx bx-right-arrow-alt"></i>

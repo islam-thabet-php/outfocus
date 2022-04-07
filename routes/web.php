@@ -30,6 +30,8 @@ Auth::routes();
 Route::group(['prefix'=>'xadmin','middleware' => ['web', 'auth']],function (){
     /* Users Management */
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
+    Route::resource('roles', \App\Http\Controllers\Admin\RoleController::class);
+
     Route::resource('/users',\App\Http\Controllers\Admin\UserController::class);
     Route::get('/users/dt/list',[\App\Http\Controllers\Admin\UserController::class,'DTList'])->name('users.dtlist');
     Route::post('/user/update',[\App\Http\Controllers\Admin\UserController::class,'updatePassword'])->name('user.update');
