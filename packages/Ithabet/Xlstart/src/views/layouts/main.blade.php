@@ -91,6 +91,7 @@ use this class instead of -- horizontal-layout horizontal-menu
 <body class="horizontal-layout horizontal-menu navbar-static 2-columns " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
 
 @include('xlstart::layouts.partials.h-navbar')
+@include('xlstart::layouts.partials.h-sidebar')
 
 
 
